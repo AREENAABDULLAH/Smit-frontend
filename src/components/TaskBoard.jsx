@@ -15,7 +15,7 @@ const TaskBoard = ({ onDragEnd }) => {
 
   useEffect(() => {
     // Fetch tasks from backend on load
-    axios.get("http://localhost:5000/api/tasks")
+    axios.get("https://smit-backend-rosy.vercel.app/api/tasks")
       .then((response) => {
         // Assuming the tasks are categorized by status on the backend
         const categorizedTasks = { "To Do": [], "In Progress": [], "Done": [] };
@@ -50,7 +50,7 @@ const TaskBoard = ({ onDragEnd }) => {
     const updatedTask = { ...editingTask, title: editedTitle, description: editedDescription };
 
     // Fix URL by using template literals
-    axios.put(`http://localhost:5000/tasks/${editingTask._id}`, updatedTask)
+    axios.put(`https://smit-backend-rosy.vercel.app/tasks/${editingTask._id}`, updatedTask)
       .then((response) => {
         // Update the tasks state after saving
         setTasks((prevTasks) => {
@@ -70,7 +70,7 @@ const TaskBoard = ({ onDragEnd }) => {
 
   const handleDeleteTask = (taskId, taskStatus) => {
     // Fix URL by using template literals
-    axios.delete(`http://localhost:5000/tasks/${taskId}`)
+    axios.delete(`https://smit-backend-rosy.vercel.app/tasks/${taskId}`)
       .then(() => {
         setTasks((prevTasks) => {
           const updatedTasks = { ...prevTasks };

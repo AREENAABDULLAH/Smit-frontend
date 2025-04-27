@@ -19,7 +19,7 @@ const AddTaskForm = ({ refreshTasks }) => {
 
     try {
       // Send POST request to backend
-      const response = await axios.post("http://localhost:5000/api/tasks", newTask);
+      const response = await axios.post("https://smit-backend-rosy.vercel.app/api/tasks", newTask);
 
       // Clear the form after successfully adding the task
       setTitle("");
