@@ -1,0 +1,84 @@
+/* Signup Form Box */
+.signup-form {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px cyan;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  /* Heading */
+  .signup-heading {
+    text-align: center;
+    color: cyan;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+    font-size: 30px;
+    animation: glow 1.5s infinite alternate;
+  }
+  
+  /* Input Fields */
+  .signup-input {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 0 10px cyan;
+    background-color: #0f0f0f;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  /* Submit Button */
+  .signup-button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: grey;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px cyan;
+    transition: all 0.3s ease;
+  }
+  
+  /* Login Link Text */
+  .login-link {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .login-link span {
+    color: cyan;
+    cursor: pointer;
+    text-shadow: 0 0 10px cyan;
+    transition: all 0.3s ease;
+  }
+  
+  /* Optional animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px cyan;
+    }
+    to {
+      text-shadow: 0 0 20px cyan, 0 0 30px cyan;
+    }
+  }
+  

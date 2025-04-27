@@ -1,0 +1,79 @@
+/* Navbar look */
+.navbar {
+  box-shadow: 0 0 10px cyan;
+}
+
+/* Logo - Natural size with max-height */
+.navbar-brand img {
+  max-height: 70px;
+  height: auto;
+  width: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px cyan, 0 0 30px cyan;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  color: black;
+  font-size: 18px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-link i {
+  margin-right: 8px;
+  font-size: 20px;
+  color: black;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(0, 255, 255, 0.2);
+  color: cyan;
+  text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan;
+  transform: scale(1.1);
+}
+
+/* Login button */
+.btn-outline-light {
+  color: black;
+  border: 2px solid cyan;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px cyan;
+}
+
+.btn-outline-light:hover {
+  color: cyan;
+  background-color: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 20px cyan, 0 0 30px cyan;
+  transform: scale(1.05);
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .navbar-collapse {
+    background-color: white;
+  }
+
+  .navbar-nav .nav-link {
+    color: black;
+    padding: 10px;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+    color: cyan;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan;
+  }
+}
